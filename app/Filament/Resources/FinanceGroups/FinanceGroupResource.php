@@ -17,12 +17,15 @@ use App\Filament\Resources\FinanceGroups\Schemas\FinanceGroupForm;
 use App\Filament\Resources\FinanceGroups\Tables\FinanceGroupsTable;
 use App\Filament\Resources\FinanceGroups\Schemas\FinanceGroupInfolist;
 use App\Filament\Resources\FinanceGroups\RelationManagers\FinanceGroupUsersRelationManager;
+use UnitEnum;
 
 class FinanceGroupResource extends Resource
 {
     protected static ?string $model = FinanceGroup::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static ?string $pluralModelLabel = 'Grup Keuangan';
+    protected static string | UnitEnum | null $navigationGroup = 'Keuangan';
 
     public static function form(Schema $schema): Schema
     {

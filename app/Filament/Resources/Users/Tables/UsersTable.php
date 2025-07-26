@@ -19,16 +19,20 @@ class UsersTable
                     ->searchable(),
                 TextColumn::make('email')
                     ->searchable(),
+                TextColumn::make('roles.name'),
                 TextColumn::make('email_verified_at')
                     ->dateTime()
-                    ->sortable(),
+                    ->sortable()
+                    ->hidden(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
+                    ->hidden()
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
+                    ->hidden()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([

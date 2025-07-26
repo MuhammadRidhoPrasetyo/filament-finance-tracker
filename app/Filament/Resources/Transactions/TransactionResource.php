@@ -16,6 +16,7 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use UnitEnum;
 
 class TransactionResource extends Resource
 {
@@ -23,6 +24,7 @@ class TransactionResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
     protected static ?string $pluralModelLabel = 'Transaksi';
+    protected static string | UnitEnum | null $navigationGroup = 'Keuangan';
 
     public static function form(Schema $schema): Schema
     {
